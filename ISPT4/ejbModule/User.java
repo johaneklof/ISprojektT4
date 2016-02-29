@@ -3,6 +3,10 @@ public class User {
 	private int age;
 	private String address;
 	
+	
+	kjhkjhjkhjkhjkhkjhkj
+	
+	
 	public String getName() {
 		return name;
 	}
@@ -21,6 +25,6 @@ public class User {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	//Kanalklåda
+	//Kanalklådafgfggdgdfgfdgfddfgdfggfdgf
 
 }
