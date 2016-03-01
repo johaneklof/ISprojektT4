@@ -5,6 +5,8 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -15,6 +17,7 @@ public class DateActivity implements Serializable {
 	private int cost;
 	private int romantic;
 	private int adrenaline;
+	private Location location;//Can only belong to one location
 
 	@Id
 	@Column(name = "name")
@@ -60,6 +63,15 @@ public class DateActivity implements Serializable {
 
 	public void setAdrenaline(int adrenaline) {
 		this.adrenaline = adrenaline;
+	}
+	
+	@ManyToOne
+	@JoinColumn(name="locationName", referencedColumnName="name")
+	public Location getLocation(){
+		return location;
+	}
+	public void setLocation(Location location){
+		this.location = location;
 	}
 
 }
