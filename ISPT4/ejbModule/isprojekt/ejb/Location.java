@@ -12,7 +12,6 @@ import javax.persistence.Table;
 @Table(name = "Location")
 public class Location implements Serializable {
 
-	ArrayList<DateActivity> dateList = new ArrayList<DateActivity>();
 	private String name;
 	private String address;
 	private String country;
