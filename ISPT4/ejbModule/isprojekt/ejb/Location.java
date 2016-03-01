@@ -1,14 +1,24 @@
 package isprojekt.ejb;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Location {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-	ArrayList <DateActivity> dateList = new ArrayList <DateActivity>();
+@Entity
+@Table(name = "Location")
+public class Location implements Serializable {
+
+	ArrayList<DateActivity> dateList = new ArrayList<DateActivity>();
 	private String name;
 	private String address;
 	private String country;
 
+	@Id
+	@Column(name = "name")
 	public String getName() {
 		return name;
 	}
@@ -17,6 +27,7 @@ public class Location {
 		this.name = name;
 	}
 
+	@Column(name = "address")
 	public String getAddress() {
 		return address;
 	}
@@ -25,6 +36,7 @@ public class Location {
 		this.address = address;
 	}
 
+	@Column(name = "country")
 	public String getCountry() {
 		return country;
 	}
