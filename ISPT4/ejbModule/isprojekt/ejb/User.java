@@ -1,11 +1,22 @@
 package isprojekt.ejb;
 
-public class User {
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="User")
+public class User implements Serializable {
 
 	private String userName;
 	private int age;
 	private String gender;
 
+	@Id
+	@Column(name="userName")
 	public String getUserName() {
 		return userName;
 	}
@@ -14,6 +25,7 @@ public class User {
 		this.userName = userName;
 	}
 
+	@Column(name="age")
 	public int getAge() {
 		return age;
 	}
@@ -22,6 +34,7 @@ public class User {
 		this.age = age;
 	}
 
+	@Column(name="gender")
 	public String getGender() {
 		return gender;
 	}
