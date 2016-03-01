@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class UserBank {
 
-	ArrayList userList = new ArrayList();
+	ArrayList <User> userList = new ArrayList <User>();
 	private String username;
 
 	public String getUsername() {
