@@ -1,7 +1,10 @@
+import java.util.ArrayList;
+
 package isprojekt.ejb;
 
 public class Location {
 
+	ArrayList dateList = new ArrayList(); 
 	private String name;
 	private String address;
 	private String country;
@@ -24,6 +27,7 @@ public class Location {
 	public void setCountry(String country) {
 		this.country = country;
 	}
+	
 	
 	
 }
