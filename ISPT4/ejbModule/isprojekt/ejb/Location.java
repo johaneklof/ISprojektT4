@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Location {
 
-	ArrayList dateList = new ArrayList();
+	ArrayList <DateActivity> dateList = new ArrayList <DateActivity>();
 	private String name;
 	private String address;
 	private String country;
